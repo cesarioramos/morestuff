@@ -33,6 +33,17 @@ public class ReservationSpecification {
 	}
 	
 //	@Test
+//	public void CancellationPenaltyDiscountOfNormalUserCancelled14DaysBefore() {
+//		CancellationPolicy policy = new CancellationPolicy();
+//		DateTime now = new DateTime();
+//		DateTime arrivalDate = now.plusDays(14);
+//		
+//		int penaltyDiscount = policy.calculatePenaltyDiscount(5001, now, arrivalDate, User.NORMAL);	
+//		
+//		assertThat(penaltyDiscount, equalTo(37.50));
+//	}
+	
+//	@Test
 //	public void CancllationNoCosts() {
 //		DateTime arrivalDate = new DateTime().plusMonths(7);
 //		Reservation reservation = new Reservation(1000, arrivalDate);
