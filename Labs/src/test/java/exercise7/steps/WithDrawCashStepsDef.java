@@ -1,4 +1,4 @@
-package exercise4.steps;
+package exercise7.steps;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,25 +17,21 @@ public class WithDrawCashStepsDef {
 	
     @Given("^the account has (\\d+) dollars in credit$")
     public void the_account_has_amount_dollars_in_credit(int inCredit) throws Throwable {
-    	System.out.println("inCredit " + inCredit);
     	atm.dollarsInCredit(inCredit);
     }
         
     @Given("^given the dispenser contains (\\d+) dollars$")
     public void the_dispenser_contains_amount_dollars(int amountInDispenser) throws Throwable {
-    	System.out.println("amountInDispenser " + amountInDispenser);
     	atm.dollarsInDispenser(amountInDispenser);
     }
 
     @When("^the customer withdraws (\\d+) dollars$")
     public void thw_customer_withdraws(int amountToWithdraw) throws Throwable {
-    	System.out.println("amountToWithdraw " + amountToWithdraw);
     	atm.requestDollars(amountToWithdraw);
     }
 
     @Then("^ensure the account contains (\\d+) dollars")
     public void ensure_the_account_contains(int expectedAmount) throws Throwable {
-    	System.out.println("expectedAmount " + expectedAmount);
     	assertThat(atm.accountSaldo(), equalTo(expectedAmount) ); 
     }
 

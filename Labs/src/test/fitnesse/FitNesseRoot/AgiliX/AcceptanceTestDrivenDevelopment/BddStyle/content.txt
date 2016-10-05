@@ -1,4 +1,3 @@
-!path /Users/Cesario/Development/Java/AgileTestTraining/Labs/target/classes/
 ----
 !3 Exercise 5
 
