@@ -7,6 +7,7 @@ package exercise4;
 
 public class CalculationsTable {
 
+	
 	private Calculator calculator = new Calculator();
 	
 	public void setOperator(String operator) {

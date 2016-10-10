@@ -9,5 +9,7 @@ ${maven.classpath}
 !2 Training Contents
 
 >WorkshopExercises
+>DemoPage
+>DemoPascal
 
 ----

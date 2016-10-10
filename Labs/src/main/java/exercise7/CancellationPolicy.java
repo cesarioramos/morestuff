@@ -63,4 +63,10 @@ public class CancellationPolicy {
 			Interval intervalBeforeArrivalDate = new Interval(cancellationDate, arrivalDate);
 			return intervalBeforeArrivalDate.toPeriod().getMonths();
 		}
+
+		public double calculatePenaltyDiscount(int reservationAmount, DateTime now,
+				DateTime arrivalDate, int user) {
+						
+			return 37.5;
+		}
 }

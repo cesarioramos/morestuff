@@ -21,3 +21,17 @@ And given the dispenser contains 1000 dollars
 When the customer withdraws 15 dollars
 Then ensure the account contains 10 dollars
 And the dispenser should have 1000 dollars
+
+Scenario Outline: Do stuff
+
+Given the account has <amount> dollars in credit
+And given the dispenser contains <creditamount> dollars
+When the customer withdraws <withdrawamount> dollars
+Then ensure the account contains <resultaccountamount> dollars
+And the dispenser should have <resultdispenseramount> dollars
+
+Examples:
+|amount|creditamount|withdrawamount|resultaccountamount|resultdispenseramount|
+|10|1000|15|10|1000|
+|100|1000|15|10|1000|
+

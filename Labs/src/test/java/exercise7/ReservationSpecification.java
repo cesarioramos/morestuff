@@ -32,16 +32,16 @@ public class ReservationSpecification {
 		assertThat(costs, equalTo(850));
 	}
 	
-//	@Test
-//	public void CancellationPenaltyDiscountOfNormalUserCancelled14DaysBefore() {
-//		CancellationPolicy policy = new CancellationPolicy();
-//		DateTime now = new DateTime();
-//		DateTime arrivalDate = now.plusDays(14);
-//		
-//		int penaltyDiscount = policy.calculatePenaltyDiscount(5001, now, arrivalDate, User.NORMAL);	
-//		
-//		assertThat(penaltyDiscount, equalTo(37.50));
-//	}
+	@Test
+	public void CancellationPenaltyDiscountOfNormalUserCancelled14DaysBefore() {
+		CancellationPolicy policy = new CancellationPolicy();
+		DateTime now = new DateTime();
+		DateTime arrivalDate = now.plusDays(14);
+		
+		double penaltyDiscount = policy.calculatePenaltyDiscount(5001, now, arrivalDate, User.NORMAL);	
+		
+		assertThat(penaltyDiscount, equalTo(37.50));
+	}
 	
 //	@Test
 //	public void CancllationNoCosts() {

@@ -7,17 +7,29 @@ import cucumber.api.java.en.And;
 import cucumber.api.PendingException;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.hamcrest.core.Is;
 import org.hamcrest.core.IsEqual;
+
 import exercise5.BDDStyle;
+import exercise7.Reservation;
 
 public class WithDrawCashStepsDef {
 
 	private BDDStyle atm = new BDDStyle();
 	
+	Reservation reservation;
+	
+	public WithDrawCashStepsDef(Reservation reservation) {
+		this.reservation = reservation;
+		
+	    System.out.println("RESERVATION FROM CASH " + reservation);
+	}
+	
     @Given("^the account has (\\d+) dollars in credit$")
     public void the_account_has_amount_dollars_in_credit(int inCredit) throws Throwable {
     	atm.dollarsInCredit(inCredit);
+
     }
         
     @Given("^given the dispenser contains (\\d+) dollars$")
@@ -53,6 +65,6 @@ public class WithDrawCashStepsDef {
     @And("^the dispenser should have (\\d+) dollars$")
     public void the_dispenser_should_have(int amountAvailable) throws Throwable {
     	assertThat(atm.dispenserAmount(), equalTo(amountAvailable) ); 
-    }
+    }    
 
 }

@@ -10,12 +10,16 @@ import org.joda.time.DateTime;
 public class Reservation {
 	
 	private float totalPrice;
-	private DateTime arrivalDate;
+	public DateTime arrivalDate;
 	private DateTime cancellationDate;
 	
 	public Reservation(float totalPrice, DateTime arrivalDate) {
 		this.arrivalDate = arrivalDate;
 		this.totalPrice = totalPrice;
+	}
+	
+	public Reservation() {
+		
 	}
 	
 	public void cancel() {

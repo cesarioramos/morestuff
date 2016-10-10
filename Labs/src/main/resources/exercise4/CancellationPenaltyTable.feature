@@ -13,7 +13,7 @@ When the customer cancels <cancel date> days before arrival date
 Then ensure the cancellation penalty is <penality amount> dollars
 
   Examples:
-  |amount|cancel date|penality amount|
+  |amount|cancel date|penalty amount|
   |5001  |10         | 37            |
   |5001  |10         | 37.50         |
   |5000  |10         | 30            |

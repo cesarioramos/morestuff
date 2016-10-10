@@ -11,3 +11,9 @@ Given a normal customer
 And given a reservation fee of 5001 dollars
 When the customer cancels 14 days before arrival date
 Then ensure the cancellation penalty is 37.50 dollars
+
+Scenario: ListTest
+Given a list
+|apple|1|
+|banana|2|
+
